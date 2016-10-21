@@ -1,0 +1,20 @@
+Time Series data format is pretty straightforward.
+
+All times are plotted using UTC(GMT).
+
+Data must have these three case sensitive fields, in any order:
+TZ Correct,Date From,Date To 
+TZ Correct,Date From,Date To
+1,10/4/2015 1:00,10/11/2015 1:00
+
+TZ Correct - If the time series data you are working with IS NOT in the time zone (TZ) that you're working in or if data is in different time zones or you need to correct for a change from Daylight Savings Time to Standard Time, use TZ Correct. If the data is already in the time zone you're working then set TZ Correct = 0. If the data is from a different TZ add the offset here.
+
+For instance, your data is in PST and you're working in EST, then TZ Correct would be +3. If the data is EST and you're working in PST, then TZ Correct would be -3. If data is UTC and you're working in EST then TZ Correct = -5. Fractional hours are allowed as there are several TZs that are offet by half an hour.
+
+Date From and Date To - Pretty much self-explanatory. Do not use leading zeros in either field. The format is:
+m/d/YYYY HH:MM
+
+Seconds are not used and must be stripped out of your data if they're present. The clock is a 24 hour clock.
+
+Any data field not named one of these three values will be ignored. Therefore, raw data can have other data fields.
+
