@@ -8,7 +8,7 @@ library(ggplot2)
 # enforcement efffort is anticipated
 shift <- 8
 
-# TZ Correct allows you to use times from different time xones and convert
+# TZ Correct allows you to use times from different time zones and convert
 # them into the same time zone. TZ Correct need not be the GMT offset
 # unless you want to change all of your times to be in GMT. For instance, you
 # have a thousand records of attempted computer intrusions. The records are
